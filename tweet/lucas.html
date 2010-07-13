@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title></title>
+    <link href="jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="jquery.tweet.query.css" media="all" rel="stylesheet" type="text/css"/>
+    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" src="jquery.tweet.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class='container'>
+      <div id='tweets' class="query"></div>
+    </div>
+    <script> 
+	    $("#tweets").tweet({
+	      username: "lucastex",
+	      count: 2,
+	      query: "from:lucastex #hm",
+	      loading_text: "carregando...",
+	      avatar_size: 32
+	    }).bind("empty", function() { $(this).append("Estamos sem tempo para twittar!"); });
+    </script>
+  </body>
+</html>
