@@ -11,15 +11,19 @@
   <body>
     <div class='container'>
       <div id='tweets' class="query"></div>
+      <div id='cotas'></div>
     </div>
     <script> 
+
+		//tweets
 	    $("#tweets").tweet({
 	      username: "lucastex",
 	      count: 2,
-	      query: "from:lucastex #hm",
+	      query: "from:lucastex #hf",
 	      loading_text: "carregando...",
 	      avatar_size: 32
 	    }).bind("empty", function() { $(this).append("Estamos sem tempo para twittar!"); });
+                				
     </script>
   </body>
 </html>
