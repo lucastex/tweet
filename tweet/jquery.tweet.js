@@ -94,7 +94,7 @@
     }
 
     function build_url() {
-      var proto = ('https:' == document.location.protocol ? 'https:' : 'http:');
+      var proto = ('http:' == document.location.protocol ? 'http:' : 'https:');
       if (s.list) {
         return proto+"//api.twitter.com/1/"+s.username[0]+"/lists/"+s.list+"/statuses.json?per_page="+s.count+"&callback=?";
       } else if (s.query == null && s.username.length == 1) {
